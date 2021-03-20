@@ -16,5 +16,6 @@ Path to your model
 ## Usage
 ```
 import Stylize from "./components/Stylize";
+
 <Stylize defaultSelected="legs" modelPath="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/chair.glb" />
 ```
