@@ -1,0 +1,25 @@
+html {
+  box-sizing: border-box;
+}
+*, 
+*:before, 
+*:after {
+  box-sizing: inherit;
+}
+
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.col{
+  float: left;
+  margin-left: 1%;
+}
+
+/* Mobile */
+@media only screen and (min-width: 480px) and (max-width: 767px){
+  .col{
+    width: 50%;
+  }
+}
