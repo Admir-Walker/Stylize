@@ -14,4 +14,7 @@ Part that should be selected by default
 Path to your model
 
 ## Usage
-```<Stylize defaultSelected="legs" modelPath="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/chair.glb" />```
+```
+import Stylize from "./components/Stylize";
+<Stylize defaultSelected="legs" modelPath="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/chair.glb" />
+```
