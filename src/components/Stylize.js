@@ -88,7 +88,7 @@ export default class Nova extends Component {
           o.receiveShadow = true;
         }
       });
-      this.setStateAsync({ modelComponents: [...temp] });
+      this.setState({ modelComponents: [...temp] });
       this.model.scale.set(2, 2, 2);
       this.model.rotation.y = Math.PI;
       this.model.position.y = -1;
@@ -135,13 +135,9 @@ export default class Nova extends Component {
     });
   };
 
-  setStateAsync = (state) => {
-    return new Promise((resolve) => {
-      this.setState(state, resolve);
-    });
-  };
+
   handleChangeComplete = async (color) => {
-    await this.setStateAsync({ color: color });
+    this.setState({ color: color });
     let new_mtl;
     new_mtl = new THREE.MeshPhongMaterial({
       color: color.hex,
@@ -150,7 +146,7 @@ export default class Nova extends Component {
     this.setMaterial(this.model, this.state.selected, new_mtl);
   };
   handleSelectedPart = async (part) => {
-    await this.setStateAsync({ selected: part });
+    this.setState({ selected: part });
   };
   setMaterial = (parent, type, mtl) => {
     parent.traverse((o) => {
@@ -162,7 +158,7 @@ export default class Nova extends Component {
     });
   };
   async componentDidMount() {
-    await this.setStateAsync({selected:this.props.defaultSelected})
+    this.setState({selected:this.props.defaultSelected})
     this.initializeThree();
     this.setControls();
     this.startAnimating();
