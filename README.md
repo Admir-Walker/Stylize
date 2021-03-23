@@ -18,4 +18,8 @@ Path to your model
 import Stylize from "./components/Stylize";
 
 <Stylize defaultSelected="legs" modelPath="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1376484/chair.glb" />
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 9631ff670098a6b9f16a6985d08af49ef706f614
